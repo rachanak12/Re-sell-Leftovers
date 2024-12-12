@@ -93,7 +93,7 @@ conn.commit()
 conn.close()
 
 st.set_page_config(
-    page_title="ServeSmart",
+    page_title="Re-sell-Leftovers",
     layout="centered",
     initial_sidebar_state="expanded",
     page_icon="🍽"
@@ -104,7 +104,7 @@ with st.sidebar:
     choice = st.radio("Menu", ["Create Account to Sell", "Sell Product", "Search Product", "Buy Product", "See or Delete Your Products", "Sales Analysis"])
 
 if choice == "Create Account to Sell":
-    st.title("Welcome to ServeSmart :wave: Create an Account and Help Prevent Waste")
+    st.title("Welcome to Re-sell-Leftovers :wave: Create an Account and Help Prevent Waste")
     conn = sqlite3.connect("database.db")
     cursor = conn.cursor()
 
@@ -390,4 +390,21 @@ elif choice == "Sales Analysis":
     else:
         st.warning("No sales data available.")
 
+<<<<<<< HEAD
     conn.close()
+=======
+    # Seller Performance Graph
+    if seller_data:
+        seller_names = [row[0] for row in seller_data]
+        total_sold = [row[1] for row in seller_data]
+
+        fig_seller = px.bar(
+            x=seller_names,
+            y=total_sold,
+            labels={'x': 'Seller Username', 'y': 'Products Sold'},
+            title="Products Sold by Each Seller"
+        )
+        st.plotly_chart(fig_seller)
+    else:
+        st.write("No seller data available for visualization.")
+>>>>>>> e3276daf8f5a890f007e271747075b457ea1e6c7
