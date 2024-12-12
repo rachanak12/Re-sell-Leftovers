@@ -94,7 +94,7 @@ conn.close()
 
 # Streamlit page configuration
 st.set_page_config(
-    page_title="ServeSmart",
+    page_title="Re-sell-Leftovers",
     layout="centered",
     initial_sidebar_state="expanded",
     page_icon="🍽"
@@ -106,7 +106,7 @@ with st.sidebar:
 
 # Logic for each menu choice
 if choice == "Create Account to Sell":
-    st.title("Welcome to ServeSmart :wave: Create an Account and Help Prevent Waste")
+    st.title("Welcome to Re-sell-Leftovers :wave: Create an Account and Help Prevent Waste")
     conn = sqlite3.connect("database.db")
     cursor = conn.cursor()
 
