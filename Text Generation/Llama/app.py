@@ -23,7 +23,7 @@ api_key = "AIzaSyD6ZxfgXOo3rr5NAyCDm7bsdWv8Q8U4T9U"
 genai.configure(api_key=api_key)
 
 # Load the model
-price_model = load_model(r"C:\Users\RACHANA KULKARNI\Downloads\ServeSmart-main\ServeSmart-main\User Interface\model.h5")
+price_model = load_model(r"C:\Users\RACHANA KULKARNI\Downloads\ServeSmart-main\ServeSmart-main\User_Interface\model.h5")
 
 # Holiday check
 holidays = holidays.Turkey()
