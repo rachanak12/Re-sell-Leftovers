@@ -1,3 +1,4 @@
+streamlit
 Pillow
 torch
 numpy
@@ -8,4 +9,4 @@ pandas
 plotly
 matplotlib
 holidays
-streamlit
+
