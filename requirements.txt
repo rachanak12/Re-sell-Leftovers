@@ -1,0 +1,12 @@
+streamlit
+sqlite3
+Pillow
+torch
+numpy
+tensorflow
+google-generativeai
+python-dotenv
+pandas
+plotly
+matplotlib
+holidays
