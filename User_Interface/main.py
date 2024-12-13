@@ -104,7 +104,7 @@ with st.sidebar:
     choice = st.radio("Menu", ["Create Account to Sell", "Sell Product", "Search Product", "Buy Product", "See or Delete Your Products", "Sales Analysis"])
 
 if choice == "Create Account to Sell":
-    st.title("Welcome to ServeSmart :wave: Create an Account and Help Prevent Waste")
+    st.title("Welcome to FoodHub :wave: Create an Account and Help Prevent Waste")
     conn = sqlite3.connect("database.db")
     cursor = conn.cursor()
 
