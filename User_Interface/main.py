@@ -93,7 +93,7 @@ conn.commit()
 conn.close()
 
 st.set_page_config(
-    page_title="ServeSmart",
+    page_title="FoodHub",
     layout="centered",
     initial_sidebar_state="expanded",
     page_icon="🍽"
@@ -218,7 +218,7 @@ elif choice == "Search Product":
                     st.write(f"Product ID: {product_id}")
                     st.write(f"Product Name: {product_name}")
                     st.write(f"Description: {description}")
-                    st.write(f"Price: ${price}")
+                    st.write(f"Price:Rs.{price}")
                     st.write(f"Discount: Rs.{discount}")
                     st.write(f"Purchased: {purchase_count} times")
 
