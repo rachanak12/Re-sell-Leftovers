@@ -93,7 +93,7 @@ conn.commit()
 conn.close()
 
 st.set_page_config(
-    page_title="FoodHub",
+    page_title="ReuseHub",
     layout="centered",
     initial_sidebar_state="expanded",
     page_icon="🍽"
@@ -104,7 +104,7 @@ with st.sidebar:
     choice = st.radio("Menu", ["Create Account to Sell", "Sell Product", "Search Product", "Buy Product", "See or Delete Your Products", "Sales Analysis"])
 
 if choice == "Create Account to Sell":
-    st.title("Welcome to FoodHub :wave: Create an Account and Help Prevent Waste")
+    st.title("Welcome to ReuseHub :wave: Create an Account and Help Prevent Waste")
     conn = sqlite3.connect("database.db")
     cursor = conn.cursor()
 
@@ -135,7 +135,7 @@ if choice == "Create Account to Sell":
                 st.error("Please enter a valid 11-digit identity number consisting of numbers only.")
 
 elif choice == "Sell Product":
-    st.title("Welcome to ServeSmart :wave: Sell Your Products and Help Prevent Waste")
+    st.title("Welcome to ReuseHub :wave: Sell Your Products and Help Prevent Waste")
 
     with st.form("add_product_form"):
         st.write("Provide a short explanation of your product, and our AI will generate a title and description upon submission. You can also upload a product photo.")
@@ -167,7 +167,7 @@ elif choice == "Sell Product":
         # AI Model to generate product title and description
                 model = genai.GenerativeModel("gemini-1.5-flash")
                 prompt = f"""
-                You are extracting a food title and description from the given text, rewriting and enhancing the description when necessary.
+                You are extracting a title and description from the given text, rewriting and enhancing the description when necessary.
                 Always respond in the user's input language.
                 Always answer in the given plain text format. Do not use any other keywords. Do not make up any information.
                 The description must contain at least 5 sentences.
@@ -248,7 +248,7 @@ elif choice == "Buy Product":
         st.title("Find a Product from Other Page and Buy Here")
         st.write("Attention please: You will need product ID to buy.")
         p_id=st.number_input("ID of the product.", min_value=1, step=1)
-        adress = st.text_input("Your Adress:")
+        adress = st.text_input("Your Address:")
         p_i_no = st.text_input("Your Identity Number:", max_chars=11)
         CVV_n = st.text_input("CVV number of your card: ", max_chars=3)
         card_no = st.text_input("Your card number: ")
